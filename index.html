@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ibe Nwandu — AI-enabled Business Transformation</title>
+  <meta name="description" content="Ibe Nwandu — projects in AI, job search, trading systems, and more.">
+  <style>
+    :root{
+      --bg:#0b0d10; --card:#14171c; --border:#2a2f37; --text:#e6e8eb;
+      --muted:#9aa0a6; --accent:#2563eb; --accent-hover:#1d4ed8;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.5}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1080px;margin:0 auto;padding:48px 20px}
+
+    /* hero */
+    .hero{display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;
+      padding:24px 0 40px}
+    .hero img.avatar{width:120px;height:120px;border-radius:50%;object-fit:cover;
+      border:2px solid var(--border)}
+    .hero h1{font-size:32px;margin:4px 0 0;font-weight:700}
+    .hero .tagline{color:var(--muted);font-size:17px;margin:0}
+    .hero-actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap;justify-content:center;
+      margin-top:8px}
+    .btn{display:inline-block;padding:10px 18px;background:var(--accent);border-radius:6px;
+      color:#fff;font-size:14px;font-weight:600}
+    .btn:hover{background:var(--accent-hover)}
+    .qr{display:flex;flex-direction:column;align-items:center;gap:6px}
+    .qr img{width:96px;height:96px;border-radius:8px;background:#fff;padding:6px}
+    .qr span{font-size:12px;color:var(--muted)}
+
+    /* grid */
+    h2.section{font-size:14px;text-transform:uppercase;letter-spacing:.08em;
+      color:var(--muted);margin:0 0 16px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:10px;
+      padding:20px;display:flex;flex-direction:column;gap:8px;min-height:150px;
+      transition:border-color .15s, transform .15s}
+    .card:hover{border-color:var(--accent);transform:translateY(-2px)}
+    .card .icon{font-size:26px}
+    .card h3{margin:0;font-size:17px;font-weight:600}
+    .card .desc{margin:0;color:var(--muted);font-size:14px;flex:1}
+    .card .link{font-size:13px;color:var(--accent);font-weight:600;margin-top:6px}
+    .badge{display:inline-block;font-size:11px;color:var(--muted);
+      border:1px solid var(--border);border-radius:999px;padding:2px 10px;width:fit-content}
+    .card img.thumb{width:100%;height:84px;object-fit:contain;border-radius:6px;
+      background:#0b0d10;border:1px solid var(--border);margin-top:4px}
+    /* TSA live message */
+    .tsa-message{font-size:13px;color:var(--text);white-space:normal;
+      background:#0b0d10;border:1px solid var(--border);border-radius:6px;padding:10px;
+      max-height:200px;overflow:hidden}
+    .tsa-meta{font-size:11px;color:var(--muted);margin-top:4px}
+
+    footer{text-align:center;color:var(--muted);font-size:13px;padding:40px 0 8px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- HERO -->
+    <header class="hero">
+      <img class="avatar" src="assets/ibe.jpg" alt="Ibe Nwandu">
+      <h1>Ibe Nwandu</h1>
+      <p class="tagline">Improving everyday tasks with AI</p>
+      <div class="hero-actions">
+        <a class="btn" href="<LINKEDIN_URL>" target="_blank" rel="noopener">LinkedIn</a>
+        <div class="qr">
+          <img src="assets/chat-qr.png" alt="QR code to chat.ibenwandu.com">
+          <span>Scan to chat with my AI</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- PROJECTS -->
+    <h2 class="section">Projects</h2>
+    <div class="grid">
+
+      <!-- 1 Jobeazee -->
+      <a class="card" href="https://jobeazee.com" target="_blank" rel="noopener">
+        <div class="icon">🧭</div>
+        <h3>Jobeazee</h3>
+        <p class="desc">AI résumé tailoring &amp; job search.</p>
+        <span class="link">jobeazee.com →</span>
+      </a>
+
+      <!-- 2 Ask-Me Chatbot -->
+      <a class="card" href="https://chat.ibenwandu.com" target="_blank" rel="noopener">
+        <div class="icon">💬</div>
+        <h3>Ask-Me Chatbot</h3>
+        <p class="desc">Chat with my CV and background.</p>
+        <span class="link">chat.ibenwandu.com →</span>
+      </a>
+
+      <!-- 3 TradeSignal Africa (live pane) -->
+      <a class="card" href="https://t.me/<CHANNEL>" target="_blank" rel="noopener">
+        <div class="icon">📈</div>
+        <h3>TradeSignal Africa</h3>
+        <p class="desc">FX signals for West-African retail traders.</p>
+        <!-- TSA:START -->
+        <div class="tsa-message">Latest signal loading…</div>
+        <!-- TSA:END -->
+        <span class="link">View on Telegram →</span>
+      </a>
+
+      <!-- 4 Emy Cockpit (private, login) -->
+      <a class="card" href="https://emy-phase1a-fly.fly.dev/cockpit" target="_blank" rel="noopener">
+        <div class="icon">🤖</div>
+        <h3>Emy Cockpit</h3>
+        <p class="desc">Portfolio control centre — autonomous trading &amp; ops.</p>
+        <img class="thumb" src="assets/cockpit.svg" alt="Control centre">
+        <span class="badge">Private · login required</span>
+      </a>
+
+      <!-- 5 Canada Investment Playbook (by request) -->
+      <a class="card" href="mailto:ibenwandu@gmail.com?subject=Requesting%20access%20to%20Canada%20Investment%20Playbook">
+        <div class="icon">🍁</div>
+        <h3>Canada Investment Playbook</h3>
+        <p class="desc">Tax-optimized household investment plans.</p>
+        <span class="badge">Private · by request ✉</span>
+      </a>
+
+      <!-- 6 AI Teacher (by request) -->
+      <a class="card" href="mailto:ibenwandu@gmail.com?subject=Requesting%20access%20to%20AI%20Teacher">
+        <div class="icon">🎓</div>
+        <h3>AI Teacher</h3>
+        <p class="desc">Ontario curriculum AI tutor (Gr 10–12).</p>
+        <span class="badge">Private · by request ✉</span>
+      </a>
+
+      <!-- 7 Indicator Alerts (by request) -->
+      <a class="card" href="mailto:ibenwandu@gmail.com?subject=Requesting%20access%20to%20Indicator%20Alerts">
+        <div class="icon">🔔</div>
+        <h3>Indicator Alerts</h3>
+        <p class="desc">Market indicator alerting service.</p>
+        <span class="badge">Private · by request ✉</span>
+      </a>
+
+    </div>
+
+    <footer>© 2026 Ibe Nwandu</footer>
+  </div>
+</body>
+</html>
