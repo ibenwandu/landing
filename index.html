@@ -17,7 +17,7 @@
     .wrap{max-width:1080px;margin:0 auto;padding:48px 20px}
 
     /* masthead: profile (left) + cockpit feature (right) */
-    .masthead{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:stretch;
+    .masthead{display:grid;grid-template-columns:1fr 1.45fr;gap:18px;align-items:stretch;
       padding:8px 0 40px}
     @media (max-width:760px){ .masthead{grid-template-columns:1fr} }
     /* hero */
@@ -25,9 +25,12 @@
       text-align:center;gap:14px}
     /* cockpit feature pane (right of masthead) */
     .cockpit-feature .desc{flex:none}
-    .cockpit-feature .thumb{height:auto;flex:1;min-height:170px}
+    .cockpit-feature .thumb{height:auto;flex:1;min-height:300px}
     .hero img.avatar{width:120px;height:120px;border-radius:50%;object-fit:cover;
       border:2px solid var(--border)}
+    .avatar-emoji{width:120px;height:120px;border-radius:50%;border:2px solid var(--border);
+      background:#14171c;display:flex;align-items:center;justify-content:center;
+      font-size:66px;line-height:1}
     .hero h1{font-size:32px;margin:4px 0 0;font-weight:700}
     .hero .tagline{color:var(--muted);font-size:17px;margin:0}
     .hero-actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap;justify-content:center;
@@ -70,7 +73,7 @@
     <!-- MASTHEAD: profile (left) + cockpit feature (right) -->
     <div class="masthead">
       <header class="hero">
-        <img class="avatar" src="assets/ibe.jpg" alt="Ibe Nwandu">
+        <div class="avatar-emoji" role="img" aria-label="Ibe Nwandu">🧑‍💻</div>
         <h1>Ibe Nwandu</h1>
         <p class="tagline">Improving everyday tasks with AI</p>
         <div class="hero-actions">

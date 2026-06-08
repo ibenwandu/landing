@@ -1,15 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120" role="img" aria-label="Control centre">
-  <rect width="320" height="120" fill="#0b0d10"/>
-  <g fill="none" stroke="#2563eb" stroke-width="2">
-    <rect x="16" y="20" width="80" height="44" rx="4" opacity="0.8"/>
-    <rect x="120" y="20" width="80" height="44" rx="4" opacity="0.6"/>
-    <rect x="224" y="20" width="80" height="44" rx="4" opacity="0.4"/>
-    <polyline points="20,56 36,44 52,50 68,30 84,38" stroke="#22c55e"/>
-    <polyline points="124,56 140,48 156,52 172,40 188,46" stroke="#e6e8eb" opacity="0.7"/>
-  </g>
-  <g fill="#9aa0a6">
-    <rect x="16" y="80" width="120" height="6" rx="3"/>
-    <rect x="16" y="94" width="180" height="6" rx="3" opacity="0.6"/>
-    <circle cx="296" cy="92" r="8" fill="#22c55e"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 240" role="img" aria-label="Portfolio control centre">
+  <rect width="460" height="240" fill="#0b0d10"/>
+  <!-- top row: 3 metric panels with sparklines -->
+  <rect x="16" y="16" width="140" height="96" rx="6" fill="#14171c" stroke="#2a2f37"/>
+  <rect x="160" y="16" width="140" height="96" rx="6" fill="#14171c" stroke="#2a2f37"/>
+  <rect x="304" y="16" width="140" height="96" rx="6" fill="#14171c" stroke="#2a2f37"/>
+  <rect x="28" y="30" width="40" height="6" rx="3" fill="#9aa0a6"/>
+  <rect x="172" y="30" width="40" height="6" rx="3" fill="#9aa0a6"/>
+  <rect x="316" y="30" width="40" height="6" rx="3" fill="#9aa0a6"/>
+  <polyline points="28,92 52,70 76,80 100,52 124,62 144,42" fill="none" stroke="#22c55e" stroke-width="2.5"/>
+  <polyline points="172,90 196,78 220,84 244,60 268,72 288,50" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+  <polyline points="316,86 340,88 364,66 388,74 412,54 432,62" fill="none" stroke="#e6e8eb" stroke-width="2.5" opacity="0.8"/>
+  <!-- bottom-left: wide line chart -->
+  <rect x="16" y="128" width="288" height="96" rx="6" fill="#14171c" stroke="#2a2f37"/>
+  <polyline points="28,202 64,182 100,190 136,150 172,166 208,120 244,142 292,108" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <circle cx="292" cy="108" r="3.5" fill="#2563eb"/>
+  <!-- bottom-right: donut gauge + status -->
+  <rect x="312" y="128" width="132" height="96" rx="6" fill="#14171c" stroke="#2a2f37"/>
+  <circle cx="360" cy="176" r="30" fill="none" stroke="#2a2f37" stroke-width="10"/>
+  <circle cx="360" cy="176" r="30" fill="none" stroke="#22c55e" stroke-width="10" stroke-dasharray="138 50" stroke-linecap="round" transform="rotate(-90 360 176)"/>
+  <circle cx="420" cy="144" r="6" fill="#22c55e"/>
+  <rect x="400" y="198" width="34" height="6" rx="3" fill="#9aa0a6"/>
 </svg>
