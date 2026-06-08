@@ -16,9 +16,16 @@
     a{color:inherit;text-decoration:none}
     .wrap{max-width:1080px;margin:0 auto;padding:48px 20px}
 
+    /* masthead: profile (left) + cockpit feature (right) */
+    .masthead{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:stretch;
+      padding:8px 0 40px}
+    @media (max-width:760px){ .masthead{grid-template-columns:1fr} }
     /* hero */
-    .hero{display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;
-      padding:24px 0 40px}
+    .hero{display:flex;flex-direction:column;align-items:center;justify-content:center;
+      text-align:center;gap:14px}
+    /* cockpit feature pane (right of masthead) */
+    .cockpit-feature .desc{flex:none}
+    .cockpit-feature .thumb{height:auto;flex:1;min-height:170px}
     .hero img.avatar{width:120px;height:120px;border-radius:50%;object-fit:cover;
       border:2px solid var(--border)}
     .hero h1{font-size:32px;margin:4px 0 0;font-weight:700}
@@ -60,19 +67,30 @@
 <body>
   <div class="wrap">
 
-    <!-- HERO -->
-    <header class="hero">
-      <img class="avatar" src="assets/ibe.jpg" alt="Ibe Nwandu">
-      <h1>Ibe Nwandu</h1>
-      <p class="tagline">Improving everyday tasks with AI</p>
-      <div class="hero-actions">
-        <a class="btn" href="https://www.linkedin.com/in/ibenwandu/" target="_blank" rel="noopener">LinkedIn</a>
-        <div class="qr">
-          <img src="assets/chat-qr.png" alt="QR code to chat.ibenwandu.com">
-          <span>Scan to chat with my AI</span>
+    <!-- MASTHEAD: profile (left) + cockpit feature (right) -->
+    <div class="masthead">
+      <header class="hero">
+        <img class="avatar" src="assets/ibe.jpg" alt="Ibe Nwandu">
+        <h1>Ibe Nwandu</h1>
+        <p class="tagline">Improving everyday tasks with AI</p>
+        <div class="hero-actions">
+          <a class="btn" href="https://www.linkedin.com/in/ibenwandu/" target="_blank" rel="noopener">LinkedIn</a>
+          <div class="qr">
+            <img src="assets/chat-qr.png" alt="QR code to chat.ibenwandu.com">
+            <span>Scan to chat with my AI</span>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
+
+      <!-- Emy Cockpit (private, login) — featured beside profile -->
+      <a class="card cockpit-feature" href="https://emy-phase1a-fly.fly.dev/cockpit" target="_blank" rel="noopener">
+        <div class="icon">🤖</div>
+        <h3>Emy Cockpit</h3>
+        <p class="desc">Portfolio control centre — autonomous trading &amp; ops.</p>
+        <img class="thumb" src="assets/cockpit.svg" alt="Control centre">
+        <span class="badge">Private · login required</span>
+      </a>
+    </div>
 
     <!-- PROJECTS -->
     <h2 class="section">Projects</h2>
@@ -105,16 +123,7 @@
         <span class="link">View on Telegram →</span>
       </a>
 
-      <!-- 4 Emy Cockpit (private, login) -->
-      <a class="card" href="https://emy-phase1a-fly.fly.dev/cockpit" target="_blank" rel="noopener">
-        <div class="icon">🤖</div>
-        <h3>Emy Cockpit</h3>
-        <p class="desc">Portfolio control centre — autonomous trading &amp; ops.</p>
-        <img class="thumb" src="assets/cockpit.svg" alt="Control centre">
-        <span class="badge">Private · login required</span>
-      </a>
-
-      <!-- 5 Canada Investment Playbook (by request) -->
+      <!-- Canada Investment Playbook (by request) -->
       <a class="card" href="mailto:ibenwandu@gmail.com?subject=Requesting%20access%20to%20Canada%20Investment%20Playbook">
         <div class="icon">🍁</div>
         <h3>Canada Investment Playbook</h3>
