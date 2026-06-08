@@ -1,41 +1,80 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 240" role="img" aria-label="Portfolio control centre">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 240" role="img" aria-label="Aircraft cockpit — portfolio control centre">
   <defs>
-    <clipPath id="ws"><path d="M34 184 L34 150 Q160 132 286 150 L286 184 Z"/></clipPath>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a6ea5"/><stop offset="1" stop-color="#16314e"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4a6b2f"/><stop offset="1" stop-color="#2c401d"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#202329"/><stop offset="1" stop-color="#0c0e11"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff6d8" stop-opacity="0.9"/><stop offset="1" stop-color="#fff6d8" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="win"><path d="M30 132 L30 58 Q240 26 450 58 L450 132 Z"/></clipPath>
   </defs>
-  <rect width="460" height="240" fill="#0b0d10"/>
-  <!-- top row: 3 metric panels with sparklines -->
-  <rect x="16" y="16" width="140" height="96" rx="6" fill="#14171c" stroke="#2a2f37"/>
-  <rect x="160" y="16" width="140" height="96" rx="6" fill="#14171c" stroke="#2a2f37"/>
-  <rect x="304" y="16" width="140" height="96" rx="6" fill="#14171c" stroke="#2a2f37"/>
-  <rect x="28" y="30" width="40" height="6" rx="3" fill="#9aa0a6"/>
-  <rect x="172" y="30" width="40" height="6" rx="3" fill="#9aa0a6"/>
-  <rect x="316" y="30" width="40" height="6" rx="3" fill="#9aa0a6"/>
-  <polyline points="28,92 52,70 76,80 100,52 124,62 144,42" fill="none" stroke="#22c55e" stroke-width="2.5"/>
-  <polyline points="172,90 196,78 220,84 244,60 268,72 288,50" fill="none" stroke="#2563eb" stroke-width="2.5"/>
-  <polyline points="316,86 340,88 364,66 388,74 412,54 432,62" fill="none" stroke="#e6e8eb" stroke-width="2.5" opacity="0.8"/>
-  <!-- bottom-left (biggest panel): cockpit view -->
-  <rect x="16" y="128" width="288" height="96" rx="6" fill="#14171c" stroke="#2a2f37"/>
-  <g clip-path="url(#ws)">
-    <rect x="34" y="130" width="252" height="40" fill="#1e3a5f"/>
-    <rect x="34" y="166" width="252" height="30" fill="#3f5a2e"/>
-    <rect x="34" y="164" width="252" height="3" fill="#e6e8eb" opacity="0.55"/>
+
+  <rect width="480" height="240" fill="#0b0d10"/>
+
+  <!-- windscreen view -->
+  <g clip-path="url(#win)">
+    <rect x="30" y="26" width="420" height="80" fill="url(#sky)"/>
+    <rect x="30" y="103" width="420" height="40" fill="url(#ground)"/>
+    <rect x="30" y="101" width="420" height="2.5" fill="#dfe6ee" opacity="0.6"/>
+    <circle cx="384" cy="56" r="26" fill="url(#sun)"/>
+    <circle cx="384" cy="56" r="9" fill="#fff6d8" opacity="0.9"/>
+    <ellipse cx="120" cy="62" rx="34" ry="9" fill="#cdd8e2" opacity="0.35"/>
+    <ellipse cx="250" cy="48" rx="26" ry="7" fill="#cdd8e2" opacity="0.25"/>
   </g>
-  <path d="M34 184 L34 150 Q160 132 286 150 L286 184 Z" fill="none" stroke="#2a2f37" stroke-width="2"/>
-  <line x1="160" y1="137" x2="160" y2="184" stroke="#2a2f37" stroke-width="3"/>
-  <!-- dashboard dials -->
-  <circle cx="74" cy="206" r="11" fill="#0b0d10" stroke="#2a2f37" stroke-width="2"/>
-  <line x1="74" y1="206" x2="80" y2="199" stroke="#22c55e" stroke-width="2"/>
-  <circle cx="116" cy="206" r="11" fill="#0b0d10" stroke="#2a2f37" stroke-width="2"/>
-  <line x1="116" y1="206" x2="110" y2="200" stroke="#2563eb" stroke-width="2"/>
-  <circle cx="158" cy="206" r="11" fill="#0b0d10" stroke="#2a2f37" stroke-width="2"/>
-  <line x1="158" y1="206" x2="164" y2="201" stroke="#e6e8eb" stroke-width="2"/>
-  <!-- control yoke -->
-  <path d="M232 216 q18 -16 36 0" fill="none" stroke="#9aa0a6" stroke-width="3"/>
-  <line x1="250" y1="207" x2="250" y2="217" stroke="#9aa0a6" stroke-width="3"/>
-  <!-- bottom-right: donut gauge + status -->
-  <rect x="312" y="128" width="132" height="96" rx="6" fill="#14171c" stroke="#2a2f37"/>
-  <circle cx="360" cy="176" r="30" fill="none" stroke="#2a2f37" stroke-width="10"/>
-  <circle cx="360" cy="176" r="30" fill="none" stroke="#22c55e" stroke-width="10" stroke-dasharray="138 50" stroke-linecap="round" transform="rotate(-90 360 176)"/>
-  <circle cx="420" cy="144" r="6" fill="#22c55e"/>
-  <rect x="400" y="198" width="34" height="6" rx="3" fill="#9aa0a6"/>
+  <!-- window frame + posts -->
+  <path d="M30 132 L30 58 Q240 26 450 58 L450 132 Z" fill="none" stroke="#3a3f47" stroke-width="4"/>
+  <line x1="170" y1="41" x2="170" y2="132" stroke="#3a3f47" stroke-width="5"/>
+  <line x1="312" y1="41" x2="312" y2="132" stroke="#3a3f47" stroke-width="5"/>
+
+  <!-- glareshield -->
+  <path d="M16 150 Q240 128 464 150 L464 159 Q240 138 16 159 Z" fill="#15171b"/>
+
+  <!-- instrument panel -->
+  <rect x="16" y="150" width="448" height="90" rx="8" fill="url(#panel)" stroke="#2a2f37"/>
+
+  <!-- left six-pack gauges (2x3) -->
+  <g stroke="#3a3f47" stroke-width="2" fill="#0b0d10">
+    <circle cx="52" cy="176" r="13"/><circle cx="88" cy="176" r="13"/><circle cx="124" cy="176" r="13"/>
+    <circle cx="52" cy="210" r="13"/><circle cx="88" cy="210" r="13"/><circle cx="124" cy="210" r="13"/>
+  </g>
+  <g stroke-width="2" stroke-linecap="round">
+    <line x1="52" y1="176" x2="59" y2="168" stroke="#22c55e"/>
+    <line x1="88" y1="176" x2="82" y2="169" stroke="#e6e8eb"/>
+    <line x1="124" y1="176" x2="131" y2="171" stroke="#2563eb"/>
+    <line x1="52" y1="210" x2="46" y2="203" stroke="#e6e8eb"/>
+    <line x1="88" y1="210" x2="95" y2="204" stroke="#22c55e"/>
+    <line x1="124" y1="210" x2="120" y2="202" stroke="#e6e8eb"/>
+  </g>
+
+  <!-- center glass MFDs -->
+  <rect x="172" y="162" width="60" height="64" rx="4" fill="#0b1a2a" stroke="#2a2f37"/>
+  <rect x="174" y="164" width="56" height="29" fill="#2f6aa0"/>
+  <rect x="174" y="193" width="56" height="31" fill="#7a5a2a"/>
+  <rect x="174" y="191" width="56" height="3" fill="#fff" opacity="0.7"/>
+  <path d="M188 195 l12 0 m-6 0 l0 5" fill="none" stroke="#ffd400" stroke-width="2"/>
+
+  <rect x="244" y="162" width="60" height="64" rx="4" fill="#0b1a2a" stroke="#2a2f37"/>
+  <circle cx="274" cy="194" r="23" fill="#06121e" stroke="#2a2f37"/>
+  <line x1="274" y1="194" x2="274" y2="174" stroke="#22c55e" stroke-width="2"/>
+  <line x1="274" y1="194" x2="289" y2="199" stroke="#e6e8eb" stroke-width="2"/>
+
+  <!-- right throttle quadrant -->
+  <rect x="392" y="160" width="58" height="72" rx="5" fill="#15171b" stroke="#2a2f37"/>
+  <rect x="404" y="178" width="8" height="42" rx="4" fill="#2a2f37"/>
+  <rect x="430" y="178" width="8" height="42" rx="4" fill="#2a2f37"/>
+  <circle cx="408" cy="178" r="7" fill="#9aa0a6"/>
+  <circle cx="434" cy="186" r="7" fill="#9aa0a6"/>
+
+  <!-- control yoke (foreground) -->
+  <g fill="none" stroke="#c2c7cf" stroke-width="6" stroke-linecap="round">
+    <path d="M214 240 q26 -30 52 0"/>
+    <line x1="240" y1="221" x2="240" y2="240"/>
+  </g>
+  <rect x="226" y="225" width="28" height="10" rx="2" fill="#9aa0a6"/>
 </svg>
