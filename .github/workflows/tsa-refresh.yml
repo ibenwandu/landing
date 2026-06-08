@@ -30,7 +30,7 @@ jobs:
             git config user.name "tsa-refresh-bot"
             git config user.email "actions@github.com"
             git add index.html
-            git commit -m "chore(tsa): refresh latest signal [skip ci]"
+            git commit -m "chore(tsa): refresh latest signal"
             git push
           else
             echo "no change"

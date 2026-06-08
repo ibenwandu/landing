@@ -33,7 +33,7 @@ def test_truncate_leaves_short_text_unchanged():
 
 def test_render_pane_escapes_html_and_stamps_time():
     now = datetime(2026, 6, 8, 14, 30, tzinfo=timezone.utc)
-    html_out = u.render_pane("<script>x</script>\nsafe", "chan", now=now)
+    html_out = u.render_pane("<script>x</script>\nsafe", now=now)
     assert "<script>" not in html_out        # escaped
     assert "&lt;script&gt;" in html_out
     assert "<br>" in html_out                # newline became <br>

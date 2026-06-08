@@ -52,7 +52,7 @@ def truncate(text: str, max_lines: int = MAX_LINES) -> str:
     return "\n".join(lines[:max_lines]) + "\n" + NOTICE
 
 
-def render_pane(message: str, channel: str, *, now: datetime) -> str:
+def render_pane(message: str, *, now: datetime) -> str:
     body = html.escape(truncate(message)).replace("\n", "<br>")
     stamp = now.strftime("%Y-%m-%d %H:%M UTC")
     return (
@@ -84,7 +84,7 @@ def main() -> int:
     if not msg:
         print("no message found; leaving last snapshot", file=sys.stderr)
         return 0
-    pane = render_pane(msg, channel, now=datetime.now(timezone.utc))
+    pane = render_pane(msg, now=datetime.now(timezone.utc))
     print("updated" if rewrite_index(pane) else "no change")
     return 0
 
