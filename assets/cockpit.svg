@@ -1,4 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 240" role="img" aria-label="Portfolio control centre">
+  <defs>
+    <clipPath id="ws"><path d="M34 184 L34 150 Q160 132 286 150 L286 184 Z"/></clipPath>
+  </defs>
   <rect width="460" height="240" fill="#0b0d10"/>
   <!-- top row: 3 metric panels with sparklines -->
   <rect x="16" y="16" width="140" height="96" rx="6" fill="#14171c" stroke="#2a2f37"/>
@@ -10,10 +13,25 @@
   <polyline points="28,92 52,70 76,80 100,52 124,62 144,42" fill="none" stroke="#22c55e" stroke-width="2.5"/>
   <polyline points="172,90 196,78 220,84 244,60 268,72 288,50" fill="none" stroke="#2563eb" stroke-width="2.5"/>
   <polyline points="316,86 340,88 364,66 388,74 412,54 432,62" fill="none" stroke="#e6e8eb" stroke-width="2.5" opacity="0.8"/>
-  <!-- bottom-left: wide line chart -->
+  <!-- bottom-left (biggest panel): cockpit view -->
   <rect x="16" y="128" width="288" height="96" rx="6" fill="#14171c" stroke="#2a2f37"/>
-  <polyline points="28,202 64,182 100,190 136,150 172,166 208,120 244,142 292,108" fill="none" stroke="#2563eb" stroke-width="3"/>
-  <circle cx="292" cy="108" r="3.5" fill="#2563eb"/>
+  <g clip-path="url(#ws)">
+    <rect x="34" y="130" width="252" height="40" fill="#1e3a5f"/>
+    <rect x="34" y="166" width="252" height="30" fill="#3f5a2e"/>
+    <rect x="34" y="164" width="252" height="3" fill="#e6e8eb" opacity="0.55"/>
+  </g>
+  <path d="M34 184 L34 150 Q160 132 286 150 L286 184 Z" fill="none" stroke="#2a2f37" stroke-width="2"/>
+  <line x1="160" y1="137" x2="160" y2="184" stroke="#2a2f37" stroke-width="3"/>
+  <!-- dashboard dials -->
+  <circle cx="74" cy="206" r="11" fill="#0b0d10" stroke="#2a2f37" stroke-width="2"/>
+  <line x1="74" y1="206" x2="80" y2="199" stroke="#22c55e" stroke-width="2"/>
+  <circle cx="116" cy="206" r="11" fill="#0b0d10" stroke="#2a2f37" stroke-width="2"/>
+  <line x1="116" y1="206" x2="110" y2="200" stroke="#2563eb" stroke-width="2"/>
+  <circle cx="158" cy="206" r="11" fill="#0b0d10" stroke="#2a2f37" stroke-width="2"/>
+  <line x1="158" y1="206" x2="164" y2="201" stroke="#e6e8eb" stroke-width="2"/>
+  <!-- control yoke -->
+  <path d="M232 216 q18 -16 36 0" fill="none" stroke="#9aa0a6" stroke-width="3"/>
+  <line x1="250" y1="207" x2="250" y2="217" stroke="#9aa0a6" stroke-width="3"/>
   <!-- bottom-right: donut gauge + status -->
   <rect x="312" y="128" width="132" height="96" rx="6" fill="#14171c" stroke="#2a2f37"/>
   <circle cx="360" cy="176" r="30" fill="none" stroke="#2a2f37" stroke-width="10"/>
