@@ -85,15 +85,14 @@
         </div>
       </header>
 
-      <!-- Emy Cockpit (private, by request) — featured beside profile.
-           NOTE: do NOT link directly to /cockpit until emy gates the dashboard
-           routes server-side; the read-only data is currently un-authenticated. -->
-      <a class="card cockpit-feature" href="mailto:ibenwandu@gmail.com?subject=Requesting%20access%20to%20Emy%20Cockpit">
+      <!-- Emy Cockpit — now gated by an emy-native passphrase+TOTP login.
+           Links to the gated /cockpit path (→ login), not the bare domain. -->
+      <a class="card cockpit-feature" href="https://cockpit.ibenwandu.com/cockpit" target="_blank" rel="noopener">
         <div class="icon">🤖</div>
         <h3>Emy Cockpit</h3>
         <p class="desc">Portfolio control centre — autonomous trading &amp; ops.</p>
         <img class="thumb" src="assets/cockpit.svg" alt="Control centre">
-        <span class="badge">Private · by request ✉</span>
+        <span class="badge">Private · sign-in required</span>
       </a>
     </div>
 
