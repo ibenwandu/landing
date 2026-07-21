@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Algo Desk Monitor — TikTok authorization</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { max-width: 680px; margin: 0 auto; padding: 48px 20px; line-height: 1.6;
+         font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; text-align: center; }
+  h1 { font-size: 1.5rem; }
+  .box { margin: 24px 0; padding: 16px; border: 1px solid #2f3a48; border-radius: 10px;
+         background: rgba(127,127,127,.08); word-break: break-all; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .95rem; }
+  button { padding: 10px 20px; font-size: 1rem; border: 0; border-radius: 8px;
+           background: #2563eb; color: #fff; cursor: pointer; }
+  .muted { opacity: .7; font-size: .9rem; }
+  .err { color: #dc2626; }
+</style>
+</head>
+<body>
+<h1>TikTok authorization</h1>
+<div id="ok" style="display:none">
+  <p>Copy this authorization code and paste it into the <strong>Algo Desk Monitor</strong> prompt in your terminal:</p>
+  <div class="box" id="code">—</div>
+  <button id="copy">Copy code</button>
+  <p class="muted">You can close this tab after copying. The code expires in a few minutes.</p>
+</div>
+<div id="bad" style="display:none">
+  <p class="err">No authorization code found in the URL.</p>
+  <p class="muted" id="errdetail"></p>
+</div>
+<script>
+  var q = new URLSearchParams(window.location.search);
+  var code = q.get("code");
+  if (code) {
+    document.getElementById("ok").style.display = "block";
+    document.getElementById("code").textContent = code;
+    document.getElementById("copy").onclick = function () {
+      navigator.clipboard.writeText(code).then(function () {
+        document.getElementById("copy").textContent = "Copied ✓";
+      });
+    };
+  } else {
+    document.getElementById("bad").style.display = "block";
+    var e = q.get("error"), d = q.get("error_description");
+    if (e) document.getElementById("errdetail").textContent = e + (d ? ": " + d : "");
+  }
+</script>
+</body>
+</html>
