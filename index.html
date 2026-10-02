@@ -210,6 +210,10 @@
   .status-live { color: var(--band-body); }
   .status-private { color: var(--band-muted); }
   .status-paused { color: var(--band-muted); }
+  .entry-flags { display: flex; gap: 28px; align-items: baseline; }
+  .entry-flags .entry-status:first-child { min-width: 56px; }
+  .access-public { color: var(--band-body); }
+  .access-closed { color: var(--band-muted); }
 
   /* ---------- method ---------- */
   .method { padding-block: 88px; }
@@ -274,7 +278,7 @@
 <header class="masthead">
   <div class="wrap masthead-inner">
     <span class="masthead-name">Ibe Nwandu</span>
-    <span class="masthead-meta">Brampton, Ontario · Eight systems, built and run solo</span>
+    <span class="masthead-meta">Toronto, Ontario · Ten systems, built and run solo</span>
   </div>
 </header>
 
@@ -286,7 +290,7 @@
         <p class="lede">I am a customer experience and business analysis lead who got tired of writing requirements for systems nobody built. So I started building them.</p>
       </div>
       <div class="hero-right">
-        <p>Eight systems across résumé tailoring, FX signals, market alerting, curriculum tutoring and an autonomous trading desk. Each one designed, shipped and maintained solo.</p>
+        <p>Ten systems across résumé tailoring, FX signals, market alerting, curriculum tutoring and an autonomous trading desk. Each one designed, shipped and maintained solo.</p>
         <div class="actions">
           <a class="btn btn-primary" href="https://chat.ibenwandu.com">
             Ask my AI anything
@@ -314,7 +318,7 @@
       </div>
       <div>
         <div class="mono-label">Worked at</div>
-        <div class="cred-value">Airtel · ExpertEdge<br>Ontario Health</div>
+        <div class="cred-value">Bharti Airtel · ExpertEdge<br>Ontario Health</div>
       </div>
     </div>
   </section>
@@ -323,103 +327,127 @@
     <div class="wrap index-inner">
       <div class="index-head">
         <h2>Index of work</h2>
-        <span class="index-count">Eight entries</span>
+        <span class="index-count">Ten entries</span>
       </div>
 
       <article class="entry">
         <div class="entry-id">
           <span class="entry-num">01</span>
           <div>
-            <div class="entry-name"><a href="https://jobeazee.com">Jobeazee</a></div>
-            <div class="entry-host">jobeazee.com</div>
+            <div class="entry-name"><a href="https://chat.ibenwandu.com">Ask-Me Chatbot</a></div>
+            <div class="entry-host">chat.ibenwandu.com</div>
           </div>
         </div>
-        <p class="entry-blurb">Tailors a résumé and cover letter to the exact job posting, using only what is already in your experience.</p>
-        <div><span class="entry-status status-live">LIVE</span></div>
+        <p class="entry-blurb">Answers questions about my CV, projects and working history in my own words.</p>
+        <div class="entry-flags"><span class="entry-status status-live">LIVE</span><span class="entry-status access-public">PUBLIC</span></div>
       </article>
 
       <article class="entry">
         <div class="entry-id">
           <span class="entry-num">02</span>
           <div>
-            <div class="entry-name">Emy Cockpit</div>
-            <div class="entry-host">sign-in required</div>
+            <div class="entry-name"><a href="https://jobeazee.com">Jobeazee</a></div>
+            <div class="entry-host">jobeazee.com</div>
           </div>
         </div>
-        <p class="entry-blurb">Portfolio control centre running autonomous trading and operations across stocks, options and crypto.</p>
-        <div><span class="entry-status status-private">PRIVATE</span></div>
+        <p class="entry-blurb">Tailors a résumé and cover letter to the exact job posting, using only what is already in your experience.</p>
+        <div class="entry-flags"><span class="entry-status status-live">LIVE</span><span class="entry-status access-public">PUBLIC</span></div>
       </article>
 
       <article class="entry">
         <div class="entry-id">
           <span class="entry-num">03</span>
           <div>
-            <div class="entry-name"><a href="https://t.me/tradesignal_global">TradeSignal Africa</a></div>
-            <div class="entry-host">telegram</div>
+            <div class="entry-name"><a href="https://phonescovered.com">Phones Covered</a></div>
+            <div class="entry-host">phonescovered.com</div>
           </div>
         </div>
-        <p class="entry-blurb">Daily FX setups and market bias for West African retail traders.</p>
-        <div><span class="entry-status status-paused">PAUSED</span></div>
+        <p class="entry-blurb">Answers after-hours calls for Ontario trades businesses and texts the owner a summary of each one.</p>
+        <div class="entry-flags"><span class="entry-status status-live">LIVE</span><span class="entry-status access-public">PUBLIC</span></div>
       </article>
 
       <article class="entry">
         <div class="entry-id">
           <span class="entry-num">04</span>
           <div>
-            <div class="entry-name"><a href="https://chat.ibenwandu.com">Ask-Me Chatbot</a></div>
-            <div class="entry-host">chat.ibenwandu.com</div>
+            <div class="entry-name">Emy Cockpit</div>
+            <div class="entry-host">sign-in required</div>
           </div>
         </div>
-        <p class="entry-blurb">Answers questions about my CV, projects and working history in my own words.</p>
-        <div><span class="entry-status status-live">LIVE</span></div>
+        <p class="entry-blurb">Portfolio control centre running autonomous trading and operations across stocks, options and crypto.</p>
+        <div class="entry-flags"><span class="entry-status status-live">LIVE</span><span class="entry-status access-closed">PRIVATE</span></div>
       </article>
 
       <article class="entry">
         <div class="entry-id">
           <span class="entry-num">05</span>
           <div>
-            <div class="entry-name">Indicator Alerts</div>
-            <div class="entry-host">indicator-alerts-fly.fly.dev</div>
+            <div class="entry-name">AI Teacher</div>
+            <div class="entry-host">by request</div>
           </div>
         </div>
-        <p class="entry-blurb">Watches an indicator stack and pushes alerts when conditions line up.</p>
-        <div><span class="entry-status status-paused">PAUSED</span></div>
+        <p class="entry-blurb">Ontario curriculum tutor for grades 10 to 12, aligned to the actual course expectations.</p>
+        <div class="entry-flags"><span class="entry-status status-live">LIVE</span><span class="entry-status access-closed">RESTRICTED</span></div>
       </article>
 
       <article class="entry">
         <div class="entry-id">
           <span class="entry-num">06</span>
           <div>
-            <div class="entry-name">Sentiment Monitor</div>
-            <div class="entry-host">sentiment-monitor-fly.fly.dev</div>
+            <div class="entry-name">Opportunity Engine</div>
+            <div class="entry-host">by request</div>
           </div>
         </div>
-        <p class="entry-blurb">Fundamental sentiment watch across major FX pairs.</p>
-        <div><span class="entry-status status-paused">PAUSED</span></div>
+        <p class="entry-blurb">Curates Canadian and US stock opportunities through structured multi-model debate, then tracks how each call performed.</p>
+        <div class="entry-flags"><span class="entry-status status-live">LIVE</span><span class="entry-status access-closed">RESTRICTED</span></div>
       </article>
 
       <article class="entry">
         <div class="entry-id">
           <span class="entry-num">07</span>
           <div>
-            <div class="entry-name">AI Teacher</div>
+            <div class="entry-name">Canada Investment Playbook</div>
             <div class="entry-host">by request</div>
           </div>
         </div>
-        <p class="entry-blurb">Ontario curriculum tutor for grades 10 to 12, aligned to the actual course expectations.</p>
-        <div><span class="entry-status status-private">PRIVATE</span></div>
+        <p class="entry-blurb">Tax-optimised household investment plans built around Canadian account rules.</p>
+        <div class="entry-flags"><span class="entry-status status-live">LIVE</span><span class="entry-status access-closed">RESTRICTED</span></div>
       </article>
 
       <article class="entry">
         <div class="entry-id">
           <span class="entry-num">08</span>
           <div>
-            <div class="entry-name">Canada Investment Playbook</div>
-            <div class="entry-host">by request</div>
+            <div class="entry-name"><a href="https://t.me/tradesignal_global">TradeSignal Africa</a></div>
+            <div class="entry-host">telegram</div>
           </div>
         </div>
-        <p class="entry-blurb">Tax-optimised household investment plans built around Canadian account rules.</p>
-        <div><span class="entry-status status-private">PRIVATE</span></div>
+        <p class="entry-blurb">Daily FX setups and market bias for West African retail traders.</p>
+        <div class="entry-flags"><span class="entry-status status-paused">PAUSED</span></div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-id">
+          <span class="entry-num">09</span>
+          <div>
+            <div class="entry-name">Indicator Alerts</div>
+            <div class="entry-host">indicator-alerts-fly.fly.dev</div>
+          </div>
+        </div>
+        <p class="entry-blurb">Watches an indicator stack and pushes alerts when conditions line up.</p>
+        <div class="entry-flags"><span class="entry-status status-paused">PAUSED</span></div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-id">
+          <span class="entry-num">10</span>
+          <div>
+            <div class="entry-name">Sentiment Monitor</div>
+            <div class="entry-host">sentiment-monitor-fly.fly.dev</div>
+          </div>
+        </div>
+        <p class="entry-blurb">Fundamental sentiment watch across major FX pairs.</p>
+        <div class="entry-flags"><span class="entry-status status-paused">PAUSED</span></div>
       </article>
     </div>
   </section>
