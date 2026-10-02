@@ -1,167 +1,461 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ibe Nwandu — AI-enabled Business Transformation</title>
-  <meta name="description" content="Ibe Nwandu — projects in AI, job search, trading systems, and more.">
-  <style>
-    :root{
-      --bg:#0b0d10; --card:#14171c; --border:#2a2f37; --text:#e6e8eb;
-      --muted:#9aa0a6; --accent:#2563eb; --accent-hover:#1d4ed8;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--text);
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.5}
-    a{color:inherit;text-decoration:none}
-    .wrap{max-width:1080px;margin:0 auto;padding:48px 20px}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ibe Nwandu — AI systems</title>
+<link rel="icon" href="data:,">
+<meta name="description" content="Ibe Nwandu — customer experience and business analysis lead building AI systems for everyday work. Index of work and an AI you can ask anything.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    /* ground + ink */
+    --paper:        #F6F4EF;
+    --ink:          #15171B;
+    --ink-body:     #2B2F36;
+    --ink-muted:    #4A4F57;
+    --ink-label:    #6A6F77;
+    --rule:         #D5D1C7;
 
-    /* masthead: profile (left) + cockpit feature (right) */
-    .masthead{display:grid;grid-template-columns:1fr 1.45fr;gap:18px;align-items:stretch;
-      padding:8px 0 40px}
-    @media (max-width:760px){ .masthead{grid-template-columns:1fr} }
-    /* hero */
-    .hero{display:flex;flex-direction:column;align-items:center;justify-content:center;
-      text-align:center;gap:14px}
-    /* cockpit feature pane (right of masthead) */
-    .cockpit-feature .desc{flex:none}
-    .cockpit-feature .thumb{height:auto;flex:1;min-height:300px}
-    .hero img.avatar{width:120px;height:120px;border-radius:50%;object-fit:cover;
-      border:2px solid var(--border)}
-    .avatar-emoji{width:120px;height:120px;border-radius:50%;border:2px solid var(--border);
-      background:#14171c;display:flex;align-items:center;justify-content:center;
-      font-size:66px;line-height:1}
-    .hero h1{font-size:32px;margin:4px 0 0;font-weight:700}
-    .hero .tagline{color:var(--muted);font-size:17px;margin:0}
-    .hero-actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap;justify-content:center;
-      margin-top:8px}
-    .btn{display:inline-block;padding:10px 18px;background:var(--accent);border-radius:6px;
-      color:#fff;font-size:14px;font-weight:600}
-    .btn:hover{background:var(--accent-hover)}
-    .qr{display:flex;flex-direction:column;align-items:center;gap:6px}
-    .qr img{width:96px;height:96px;border-radius:8px;background:#fff;padding:6px}
-    .qr span{font-size:12px;color:var(--muted)}
+    /* dark band */
+    --band:         #15171B;
+    --band-text:    #F6F4EF;
+    --band-body:    #C9CCD1;
+    --band-muted:   #8A8F97;
+    --band-rule:    #3A3E45;
+    --band-rule-2:  #2A2E35;
 
-    /* grid */
-    h2.section{font-size:14px;text-transform:uppercase;letter-spacing:.08em;
-      color:var(--muted);margin:0 0 16px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:10px;
-      padding:20px;display:flex;flex-direction:column;gap:8px;min-height:150px;
-      transition:border-color .15s, transform .15s}
-    .card:hover{border-color:var(--accent);transform:translateY(-2px)}
-    .card .icon{font-size:26px}
-    .card h3{margin:0;font-size:17px;font-weight:600}
-    .card .desc{margin:0;color:var(--muted);font-size:14px;flex:1}
-    .card .link{font-size:13px;color:var(--accent);font-weight:600;margin-top:6px}
-    .badge{display:inline-block;font-size:11px;color:var(--muted);
-      border:1px solid var(--border);border-radius:999px;padding:2px 10px;width:fit-content}
-    .card img.thumb{width:100%;height:84px;object-fit:contain;border-radius:6px;
-      background:#0b0d10;border:1px solid var(--border);margin-top:4px}
-    /* TSA live message */
-    .tsa-message{font-size:13px;color:var(--text);white-space:normal;
-      background:#0b0d10;border:1px solid var(--border);border-radius:6px;padding:10px;
-      max-height:200px;overflow:hidden}
-    .tsa-meta{font-size:11px;color:var(--muted);margin-top:4px}
+    /* accent */
+    --accent:       #1B3A8C;
+    --accent-hover: #0E2256;
 
-    footer{text-align:center;color:var(--muted);font-size:13px;padding:40px 0 8px}
-  </style>
+    /* type */
+    --display: 'Bricolage Grotesque', 'Helvetica Neue', Helvetica, sans-serif;
+    --body:    'IBM Plex Sans', 'Helvetica Neue', Helvetica, sans-serif;
+    --mono:    'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+    /* layout */
+    --container: 1120px;
+    --gutter: 40px;
+  }
+
+  @media (max-width: 700px) {
+    :root { --gutter: 20px; }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding-inline: var(--gutter);
+  }
+
+  a { color: var(--accent); }
+  a:hover { color: var(--accent-hover); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .index a:focus-visible { outline-color: var(--band-text); }
+
+  .mono-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-label);
+  }
+
+  /* ---------- masthead ---------- */
+  .masthead { padding-top: 32px; }
+  .masthead-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--ink);
+  }
+  .masthead-name {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  .masthead-meta {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    color: #5A5F68;
+  }
+
+  /* ---------- hero ---------- */
+  .hero { padding-top: 72px; }
+  .hero h1 {
+    margin: 0;
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(42px, 7vw, 96px);
+    line-height: 0.95;
+    letter-spacing: -0.035em;
+    max-width: 15ch;
+    text-wrap: pretty;
+  }
+  .hero-cols {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(380px, 100%), 1fr));
+    gap: 48px;
+    margin-top: 56px;
+    padding-bottom: 64px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .lede { margin: 0; font-size: clamp(18px, 2vw, 21px); line-height: 1.6; color: var(--ink-body); }
+  .hero-right { display: flex; flex-direction: column; gap: 24px; }
+  .hero-right p { margin: 0; font-size: 17px; line-height: 1.7; color: var(--ink-muted); }
+
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 15px 24px;
+    border-radius: 2px;
+    min-height: 44px;
+  }
+  .btn-primary { background: var(--accent); color: var(--paper); border: 1px solid var(--accent); }
+  .btn-primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); color: var(--paper); }
+  .btn-secondary { background: transparent; color: var(--ink); border: 1px solid var(--ink); }
+  .btn-secondary:hover { background: var(--ink); color: var(--paper); }
+
+  /* ---------- credentials ---------- */
+  .creds { padding-block: 28px; }
+  .creds-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+    gap: 28px;
+  }
+  .cred-value { font-size: 15px; line-height: 1.5; margin-top: 8px; }
+  /* auto-fit gives 3 + 1 orphan on tablet; hold at 2 x 2 until four fit */
+  @media (min-width: 690px) and (max-width: 1000px) {
+    .creds-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* ---------- index (dark band) ---------- */
+  .index {
+    background: var(--band);
+    color: var(--band-text);
+    margin-top: 56px;
+  }
+  .index-inner { padding-block: 72px; }
+  .index-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 24px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--band-rule);
+    padding-bottom: 16px;
+  }
+  .index-head h2 {
+    margin: 0;
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: clamp(24px, 3vw, 30px);
+    letter-spacing: -0.02em;
+  }
+  .index-count {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    color: var(--band-muted);
+  }
+
+  .entry {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: 24px;
+    padding-block: 28px;
+    border-bottom: 1px solid var(--band-rule-2);
+    align-items: baseline;
+  }
+  .entry-id { display: flex; gap: 20px; align-items: baseline; }
+  .entry-num { font-family: var(--mono); font-size: 13px; color: var(--band-muted); }
+  .entry-name {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: clamp(22px, 2.4vw, 27px);
+    letter-spacing: -0.015em;
+  }
+  .entry-name a { color: var(--band-text); text-decoration: none; border-bottom: 1px solid transparent; }
+  .entry-name a:hover { color: var(--band-text); border-bottom-color: var(--band-text); }
+  .entry-host { font-family: var(--mono); font-size: 12px; color: var(--band-muted); margin-top: 7px; }
+  .entry-blurb { margin: 0; font-size: 16px; line-height: 1.65; color: var(--band-body); }
+  .entry-status {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+  }
+  .status-live { color: var(--band-body); }
+  .status-private { color: var(--band-muted); }
+  .status-paused { color: var(--band-muted); }
+
+  /* ---------- method ---------- */
+  .method { padding-block: 88px; }
+  .method-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr));
+    gap: 56px;
+    align-items: start;
+  }
+  .method blockquote {
+    margin: 0;
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: clamp(27px, 3.6vw, 40px);
+    line-height: 1.18;
+    letter-spacing: -0.025em;
+    text-wrap: pretty;
+  }
+  .method-notes { display: flex; flex-direction: column; gap: 22px; padding-top: 10px; }
+  .method-notes p { margin: 0; font-size: 17px; line-height: 1.7; color: var(--ink-muted); }
+
+  /* ---------- contact ---------- */
+  .contact { border-top: 2px solid var(--ink); }
+  .contact-inner { padding-block: 72px 80px; }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(380px, 100%), 1fr));
+    gap: 48px;
+    align-items: center;
+  }
+  .contact h2 {
+    margin: 0;
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(34px, 4.6vw, 52px);
+    line-height: 1.04;
+    letter-spacing: -0.03em;
+    max-width: 14ch;
+  }
+  .contact p { margin: 0 0 28px; font-size: 18px; line-height: 1.65; color: var(--ink-muted); }
+
+  /* ---------- footer ---------- */
+  .foot { border-top: 1px solid var(--rule); }
+  .foot-inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding-block: 24px;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-label);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    a, .btn { transition: color 120ms ease, background-color 120ms ease, border-color 120ms ease; }
+  }
+</style>
 </head>
 <body>
-  <div class="wrap">
 
-    <!-- MASTHEAD: profile (left) + cockpit feature (right) -->
-    <div class="masthead">
-      <header class="hero">
-        <div class="avatar-emoji" role="img" aria-label="Ibe Nwandu">🧠</div>
-        <h1>Ibe Nwandu</h1>
-        <p class="tagline">Improving everyday tasks with AI</p>
-        <div class="hero-actions">
-          <a class="btn" href="https://www.linkedin.com/in/ibenwandu/" target="_blank" rel="noopener">LinkedIn</a>
-          <div class="qr">
-            <img src="assets/chat-qr.png" alt="QR code to chat.ibenwandu.com">
-            <span>Scan to chat with my AI</span>
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <span class="masthead-name">Ibe Nwandu</span>
+    <span class="masthead-meta">Brampton, Ontario · Eight systems, built and run solo</span>
+  </div>
+</header>
+
+<main>
+  <section class="hero wrap">
+    <h1>Improving everyday work with AI.</h1>
+    <div class="hero-cols">
+      <div>
+        <p class="lede">I am a customer experience and business analysis lead who got tired of writing requirements for systems nobody built. So I started building them.</p>
+      </div>
+      <div class="hero-right">
+        <p>Eight systems across résumé tailoring, FX signals, market alerting, curriculum tutoring and an autonomous trading desk. Each one designed, shipped and maintained solo.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://chat.ibenwandu.com">
+            Ask my AI anything
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 12 L12 2 M5 2 h7 v7"/></svg>
+          </a>
+          <a class="btn btn-secondary" href="https://www.linkedin.com/in/ibenwandu">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="creds wrap">
+    <div class="creds-grid">
+      <div>
+        <div class="mono-label">Education</div>
+        <div class="cred-value">MBA, Management Engineering<br>University of Manchester</div>
+      </div>
+      <div>
+        <div class="mono-label">Certifications</div>
+        <div class="cred-value">PMP · PSM · ITIL</div>
+      </div>
+      <div>
+        <div class="mono-label">Sectors</div>
+        <div class="cred-value">Telecommunications · Consulting<br>Public healthcare</div>
+      </div>
+      <div>
+        <div class="mono-label">Worked at</div>
+        <div class="cred-value">Airtel · ExpertEdge<br>Ontario Health</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="index" id="work">
+    <div class="wrap index-inner">
+      <div class="index-head">
+        <h2>Index of work</h2>
+        <span class="index-count">Eight entries</span>
+      </div>
+
+      <article class="entry">
+        <div class="entry-id">
+          <span class="entry-num">01</span>
+          <div>
+            <div class="entry-name"><a href="https://jobeazee.com">Jobeazee</a></div>
+            <div class="entry-host">jobeazee.com</div>
           </div>
         </div>
-      </header>
+        <p class="entry-blurb">Tailors a résumé and cover letter to the exact job posting, using only what is already in your experience.</p>
+        <div><span class="entry-status status-live">LIVE</span></div>
+      </article>
 
-      <!-- Emy Cockpit — now gated by an emy-native passphrase+TOTP login.
-           Links to the gated /cockpit path (→ login), not the bare domain. -->
-      <a class="card cockpit-feature" href="https://cockpit.ibenwandu.com/cockpit" target="_blank" rel="noopener">
-        <div class="icon">🤖</div>
-        <h3>Emy Cockpit</h3>
-        <p class="desc">Portfolio control centre — autonomous trading &amp; ops.</p>
-        <img class="thumb" src="assets/cockpit.svg" alt="Control centre">
-        <span class="badge">Private · sign-in required</span>
-      </a>
+      <article class="entry">
+        <div class="entry-id">
+          <span class="entry-num">02</span>
+          <div>
+            <div class="entry-name">Emy Cockpit</div>
+            <div class="entry-host">sign-in required</div>
+          </div>
+        </div>
+        <p class="entry-blurb">Portfolio control centre running autonomous trading and operations across stocks, options and crypto.</p>
+        <div><span class="entry-status status-private">PRIVATE</span></div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-id">
+          <span class="entry-num">03</span>
+          <div>
+            <div class="entry-name"><a href="https://t.me/tradesignal_global">TradeSignal Africa</a></div>
+            <div class="entry-host">telegram</div>
+          </div>
+        </div>
+        <p class="entry-blurb">Daily FX setups and market bias for West African retail traders.</p>
+        <div><span class="entry-status status-paused">PAUSED</span></div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-id">
+          <span class="entry-num">04</span>
+          <div>
+            <div class="entry-name"><a href="https://chat.ibenwandu.com">Ask-Me Chatbot</a></div>
+            <div class="entry-host">chat.ibenwandu.com</div>
+          </div>
+        </div>
+        <p class="entry-blurb">Answers questions about my CV, projects and working history in my own words.</p>
+        <div><span class="entry-status status-live">LIVE</span></div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-id">
+          <span class="entry-num">05</span>
+          <div>
+            <div class="entry-name">Indicator Alerts</div>
+            <div class="entry-host">indicator-alerts-fly.fly.dev</div>
+          </div>
+        </div>
+        <p class="entry-blurb">Watches an indicator stack and pushes alerts when conditions line up.</p>
+        <div><span class="entry-status status-paused">PAUSED</span></div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-id">
+          <span class="entry-num">06</span>
+          <div>
+            <div class="entry-name">Sentiment Monitor</div>
+            <div class="entry-host">sentiment-monitor-fly.fly.dev</div>
+          </div>
+        </div>
+        <p class="entry-blurb">Fundamental sentiment watch across major FX pairs.</p>
+        <div><span class="entry-status status-paused">PAUSED</span></div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-id">
+          <span class="entry-num">07</span>
+          <div>
+            <div class="entry-name">AI Teacher</div>
+            <div class="entry-host">by request</div>
+          </div>
+        </div>
+        <p class="entry-blurb">Ontario curriculum tutor for grades 10 to 12, aligned to the actual course expectations.</p>
+        <div><span class="entry-status status-private">PRIVATE</span></div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-id">
+          <span class="entry-num">08</span>
+          <div>
+            <div class="entry-name">Canada Investment Playbook</div>
+            <div class="entry-host">by request</div>
+          </div>
+        </div>
+        <p class="entry-blurb">Tax-optimised household investment plans built around Canadian account rules.</p>
+        <div><span class="entry-status status-private">PRIVATE</span></div>
+      </article>
     </div>
+  </section>
 
-    <!-- PROJECTS -->
-    <h2 class="section">Projects</h2>
-    <div class="grid">
-
-      <!-- 1 Jobeazee -->
-      <a class="card" href="https://jobeazee.com" target="_blank" rel="noopener">
-        <div class="icon">🧭</div>
-        <h3>Jobeazee</h3>
-        <p class="desc">AI résumé tailoring &amp; job search.</p>
-        <span class="link">jobeazee.com →</span>
-      </a>
-
-      <!-- 2 Ask-Me Chatbot -->
-      <a class="card" href="https://chat.ibenwandu.com" target="_blank" rel="noopener">
-        <div class="icon">💬</div>
-        <h3>Ask-Me Chatbot</h3>
-        <p class="desc">Chat with my CV and background.</p>
-        <span class="link">chat.ibenwandu.com →</span>
-      </a>
-
-      <!-- 3 TradeSignal Africa (live pane) -->
-      <a class="card" href="https://t.me/tradesignal_africa" target="_blank" rel="noopener">
-        <div class="icon">📈</div>
-        <h3>TradeSignal Africa</h3>
-        <p class="desc">FX signals for West-African retail traders.</p>
-        <!-- TSA:START -->
-<div class="tsa-message">📊 Market Pulse — Pre-Close<br><br>Bias: BULLISH (USD)<br>Regime: HIGH_VOL<br><br>Analysts see 2 long / 5 short setups across 5 pairs today.<br><br>Strongest read: XBR/USD SELL (2 of 2 analysts).<br><br>Market positioning summarised below; Analyst commentary disabled this slot.<br><br>High-impact ahead: CAD CPI m/m; CAD Median CPI y/y; CAD Trimmed CPI y/y<br>… view full signal on Telegram</div><div class="tsa-meta">updated 2026-07-26 14:20 UTC</div>
-<!-- TSA:END -->
-        <span class="link">View on Telegram →</span>
-      </a>
-
-      <!-- Canada Investment Playbook (by request) -->
-      <a class="card" href="mailto:ibenwandu@gmail.com?subject=Requesting%20access%20to%20Canada%20Investment%20Playbook">
-        <div class="icon">🍁</div>
-        <h3>Canada Investment Playbook</h3>
-        <p class="desc">Tax-optimized household investment plans.</p>
-        <span class="badge">Private · by request ✉</span>
-      </a>
-
-      <!-- 6 AI Teacher (by request) -->
-      <a class="card" href="mailto:ibenwandu@gmail.com?subject=Requesting%20access%20to%20AI%20Teacher">
-        <div class="icon">🎓</div>
-        <h3>AI Teacher</h3>
-        <p class="desc">Ontario curriculum AI tutor (Gr 10–12).</p>
-        <span class="badge">Private · by request ✉</span>
-      </a>
-
-      <!-- 7 Indicator Alerts -->
-      <a class="card" href="https://indicator-alerts-fly.fly.dev" target="_blank" rel="noopener">
-        <div class="icon">🔔</div>
-        <h3>Indicator Alerts</h3>
-        <p class="desc">Market indicator alerting service.</p>
-        <span class="link">indicator-alerts-fly.fly.dev →</span>
-      </a>
-
-      <!-- 8 Sentiment Monitor -->
-      <a class="card" href="https://sentiment-monitor-fly.fly.dev" target="_blank" rel="noopener">
-        <div class="icon">🛰️</div>
-        <h3>Sentiment Monitor</h3>
-        <p class="desc">Fundamental sentiment watch on FX pairs.</p>
-        <span class="link">sentiment-monitor-fly.fly.dev →</span>
-      </a>
-
+  <section class="method wrap">
+    <div class="method-grid">
+      <blockquote>The model is rarely the hard part. Knowing which step of a process is costing someone money — that is the job.</blockquote>
+      <div class="method-notes">
+        <p>Service design and delivery work taught me where effort actually leaks: the handoff nobody owns, the call that goes to voicemail, the report rebuilt by hand every Monday.</p>
+        <p>I build for those gaps specifically, and I keep the scope small enough that one person can run it properly.</p>
+      </div>
     </div>
+  </section>
 
-    <footer>© 2026 Ibe Nwandu</footer>
+  <section class="contact">
+    <div class="wrap contact-inner">
+      <div class="contact-grid">
+        <h2>Start with a question.</h2>
+        <div>
+          <p>My AI has read everything on this page and the detail behind it. Ask it what you would ask me on a first call.</p>
+          <a class="btn btn-primary" href="https://chat.ibenwandu.com">
+            Ask my AI anything
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 12 L12 2 M5 2 h7 v7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <span>© 2026 Ibe Nwandu</span>
+    <span>ibenwandu.com</span>
   </div>
+</footer>
+
 </body>
 </html>
