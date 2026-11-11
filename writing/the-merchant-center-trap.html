@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Merchant Center trap: eleven products, zero barcodes — Ibe Nwandu</title>
+<link rel="icon" href="data:,">
+<meta name="description" content="The Merchant Center trap: eleven products, zero barcodes">
+<link rel="alternate" type="application/rss+xml" title="Ibe Nwandu — writing" href="/feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root { --paper:#F6F4EF; --ink:#15171B; --ink-body:#2B2F36; --ink-muted:#4A4F57; --rule:#D5D1C7; --accent:#1B3A8C; }
+  body { margin:0; background:var(--paper); color:var(--ink-body); font:18px/1.65 'IBM Plex Sans', system-ui, sans-serif; }
+  .wrap { max-width:720px; margin:0 auto; padding:40px 24px 96px; }
+  .mast { display:flex; justify-content:space-between; align-items:baseline; border-bottom:1px solid var(--rule); padding-bottom:14px; margin-bottom:48px; }
+  .mast a { color:var(--ink); text-decoration:none; font:600 13px/1 'IBM Plex Mono', monospace; letter-spacing:.14em; text-transform:uppercase; }
+  .mast span { color:var(--ink-muted); font:12px/1 'IBM Plex Mono', monospace; letter-spacing:.08em; }
+  h1 { font:800 clamp(34px, 5vw, 48px)/1.05 'Bricolage Grotesque', sans-serif; color:var(--ink); margin:0 0 12px; letter-spacing:-.02em; }
+  .meta { font:12px/1.4 'IBM Plex Mono', monospace; color:var(--ink-muted); letter-spacing:.06em; text-transform:uppercase; margin-bottom:36px; }
+  p { margin:0 0 20px; }
+  h2 { font:600 22px/1.25 'Bricolage Grotesque', sans-serif; color:var(--ink); margin:36px 0 12px; }
+  a { color:var(--accent); }
+  .note { border-top:1px solid var(--rule); margin-top:48px; padding-top:18px; font:14px/1.6 'IBM Plex Sans', sans-serif; color:var(--ink-muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="mast"><a href="/">Ibe Nwandu</a><span>Writing</span></div>
+  <h1>The Merchant Center trap: eleven products, zero barcodes</h1>
+  <div class="meta">11 November 2026</div>
+
+<p>For months, a small Shopify store had eighty-three listings in Google Merchant Center, all marked <em>Limited</em>, and zero clicks. The products existed. They were in stock. The storefront looked fine. The cause was one empty field, repeated eleven times.</p>
+<p>Google marks branded products as Limited when the feed lacks unique product identifiers: a GTIN/MPN pair, or a brand with enough information to trust the identity. The store had eleven products — rope leashes, knitwear, candles — and none carried a barcode. The SKU was a generated Shopify id, not a manufacturer part number. So no product could be matched, and no free listing was served.</p>
+<h2>The fix is administrative, not creative</h2>
+<p>For each product: set the brand, add the barcode where the supplier has one, use the supplier's SKU as the MPN, and for genuinely handmade items declare <code>identifier_exists=false</code> instead of inventing an identifier. Then reconcile the feed count with the catalogue (83 feed items, 11 live products — a stale feed is its own trap) and request a re-review.</p>
+<p>None of that is marketing. It is switch-flipping. But it is the difference between a store that can be discovered and one that cannot, and it is invisible unless someone looks at the feed instead of the design.</p>
+<p>The broader lesson: distribution problems are often data problems wearing a design costume. Before writing a single post or pin, check whether the platform can see the product at all.</p>
+<p>I built a free public-data scorecard that catches this class of problem: <a href="https://shipreadyscore.com">shipreadyscore.com</a>.</p>
+  <div class="note">Ibe Nwandu builds AI systems and small products in Toronto. <a href="/">Index of work</a> · <a href="/writing/">All writing</a> · <a href="/feed.xml">RSS</a></div>
+</div>
+</body>
+</html>
