@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The gate said yes — Ibe Nwandu</title><link rel="icon" href="data:,">
+<meta name="description" content="On 20 August I switched my AI system to "observe only". Then I asked the gate it checks before placing an order whether it could still act.
+
+It said y">
+<link rel="alternate" type="application/rss+xml" title="Ibe Nwandu — writing" href="/feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root { --paper:#F6F4EF; --ink:#15171B; --ink-body:#2B2F36; --ink-muted:#4A4F57; --rule:#D5D1C7; --accent:#1B3A8C; }
+  body { margin:0; background:var(--paper); color:var(--ink-body); font:18px/1.65 'IBM Plex Sans', system-ui, sans-serif; }
+  .wrap { max-width:720px; margin:0 auto; padding:40px 24px 96px; }
+  .mast { display:flex; justify-content:space-between; align-items:baseline; border-bottom:1px solid var(--rule); padding-bottom:14px; margin-bottom:48px; }
+  .mast a { color:var(--ink); text-decoration:none; font:600 13px/1 'IBM Plex Mono', monospace; letter-spacing:.14em; text-transform:uppercase; }
+  .mast span { color:var(--ink-muted); font:12px/1 'IBM Plex Mono', monospace; letter-spacing:.08em; }
+  h1 { font:800 clamp(34px,5vw,48px)/1.05 'Bricolage Grotesque', sans-serif; color:var(--ink); margin:0 0 12px; letter-spacing:-.02em; }
+  .meta { font:12px/1.4 'IBM Plex Mono', monospace; color:var(--ink-muted); letter-spacing:.06em; text-transform:uppercase; margin-bottom:36px; }
+  p { margin:0 0 20px; } a { color:var(--accent); }
+  .note { border-top:1px solid var(--rule); margin-top:48px; padding-top:18px; font:14px/1.6 'IBM Plex Sans', sans-serif; color:var(--ink-muted); }
+</style></head><body><div class="wrap">
+  <div class="mast"><a href="/">Ibe Nwandu</a><span>Writing</span></div>
+  <h1>The gate said yes</h1>
+  <div class="meta">August 2026 · LinkedIn</div>
+  <p>On 20 August I switched my AI system to "observe only". Then I asked the gate it checks before placing an order whether it could still act.</p>
+  <p>It said yes.</p>
+  <p>The system had stopped earning its keep. Months of results said it had no edge, so I was shutting it down. It traded a practice account, which is the only reason this is a lesson and not a loss. The plan was careful: set the mode, stop the services, confirm. The mode changed, and the status page reported, correctly, that execution was no longer allowed.</p>
+  <p>But the mode governed what the AI decided to do on its own. The component that actually places orders asks a different gate, and that gate never read the mode. It was also built to fail open: if any data was missing, it allowed the action. The real stop was a separate pause event. I sent it, checked again, and this time the executor logged the line I wanted to see: blocked, reason manual pause.</p>
+  <p>I don't know whether it would have placed an order in that window. I know it was allowed to.</p>
+  <p>That was the first of five. Over the next two days I found four more controls that didn't do what their names said:</p>
+  <p>- Two switches documented as "off by default" were on in production.<br>- My own check for "is it disarmed?" couldn't move. It would have reported failure on a successful shutdown.<br>- Three services I had stopped restarted themselves, and billed for about 14 hours after I'd reported them off.</p>
+  <p>And a pause doesn't cancel orders already resting. One placed before the pause filled after it.</p>
+  <p>The error was mine, and it was a specific one. I checked state at the moment I acted, and not again afterwards. The status page even listed the right switch among its own constraints. My plan quoted that line and didn't follow it. I found the rest only because I kept asking "is it really off?" instead of trusting that it was.</p>
+  <p>The rule I took from it: a label is a claim. A switch is only real if the part doing the work reads it. Don't test the switch you flipped; test the gate the action has to pass through, and test it again an hour later.</p>
+  <p>It's also why every action my agents can take now sits in one of three tiers. Some they just do. Some they must ask for. And some they cannot do at all, because nothing exists to carry them out. The third tier is the only one that doesn't depend on a label being honest.</p>
+  <p>If you're deploying agentic AI, the question for your vendor or your own team isn't "is there a kill switch?" It's "which component reads it, what happens when it can't, and can you show me it stopping something?" If the answer is a settings page, you have a request, not a wall.</p>
+  <p>Next: the system that ran a self-improvement loop for six months, and improved nothing.</p>
+  <div class="note">Originally posted on LinkedIn, August 2026 · <a href="https://www.linkedin.com/in/ibenwandu/recent-activity/all/">view the original thread</a><br><br>Ibe Nwandu builds AI systems and small products in Toronto. <a href="/">Index of work</a> · <a href="/writing/">All writing</a> · <a href="/feed.xml">RSS</a></div>
+</div></body></html>

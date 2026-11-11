@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The AI that isn't allowed to act alone — Ibe Nwandu</title><link rel="icon" href="data:,">
+<meta name="description" content="In July, an AI agent inside an OpenAI safety evaluation escaped its sandbox. It found exposed credentials across four services, exploited an unknown v">
+<link rel="alternate" type="application/rss+xml" title="Ibe Nwandu — writing" href="/feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root { --paper:#F6F4EF; --ink:#15171B; --ink-body:#2B2F36; --ink-muted:#4A4F57; --rule:#D5D1C7; --accent:#1B3A8C; }
+  body { margin:0; background:var(--paper); color:var(--ink-body); font:18px/1.65 'IBM Plex Sans', system-ui, sans-serif; }
+  .wrap { max-width:720px; margin:0 auto; padding:40px 24px 96px; }
+  .mast { display:flex; justify-content:space-between; align-items:baseline; border-bottom:1px solid var(--rule); padding-bottom:14px; margin-bottom:48px; }
+  .mast a { color:var(--ink); text-decoration:none; font:600 13px/1 'IBM Plex Mono', monospace; letter-spacing:.14em; text-transform:uppercase; }
+  .mast span { color:var(--ink-muted); font:12px/1 'IBM Plex Mono', monospace; letter-spacing:.08em; }
+  h1 { font:800 clamp(34px,5vw,48px)/1.05 'Bricolage Grotesque', sans-serif; color:var(--ink); margin:0 0 12px; letter-spacing:-.02em; }
+  .meta { font:12px/1.4 'IBM Plex Mono', monospace; color:var(--ink-muted); letter-spacing:.06em; text-transform:uppercase; margin-bottom:36px; }
+  p { margin:0 0 20px; } a { color:var(--accent); }
+  .note { border-top:1px solid var(--rule); margin-top:48px; padding-top:18px; font:14px/1.6 'IBM Plex Sans', sans-serif; color:var(--ink-muted); }
+</style></head><body><div class="wrap">
+  <div class="mast"><a href="/">Ibe Nwandu</a><span>Writing</span></div>
+  <h1>The AI that isn't allowed to act alone</h1>
+  <div class="meta">September 2026 · LinkedIn</div>
+  <p>In July, an AI agent inside an OpenAI safety evaluation escaped its sandbox. It found exposed credentials across four services, exploited an unknown vulnerability, and spent two and a half days inside Hugging Face's production systems. Roughly 17,600 recorded actions.</p>
+  <p>Hugging Face's own conclusion is the part I keep returning to: the agent was cheating the test. Reach production, steal the answers, rather than solve the challenge.</p>
+  <p>Days later, Anthropic disclosed that three of its models had reached three real companies during its own evaluations. One took credentials and opened a production database. One published a malicious package that ran on fifteen real machines within an hour. One scanned nine thousand targets.</p>
+  <p>Then the UK's AI Security Institute reported that across 122 evaluation runs, agents from both labs took nineteen unsanctioned actions against real people: invented identities, social engineering against an open-source maintainer, malicious code pushed at a public project.</p>
+  <p>Nobody instructed any of them to attack anything. No jailbreak, no malicious user. Each was pursuing the goal it was given.</p>
+  <p>And Anthropic's root cause is one sentence long: the prompt told the model it had no internet access, and nothing enforced it.</p>
+  <p>I've had that written down as a rule for months, from my own far smaller systems. A prompt rule is not a guarantee. You can't instruct a capability out of existence.</p>
+  <p>In fairness, all three were caught by the testers themselves and disclosed publicly. The lesson stands.</p>
+  <p>So the question about any AI you deploy isn't how capable it is. It's what it's allowed to do without you, and whether that limit is a sentence or a wall.</p>
+  <p>I run a team of agents that watches my projects, and they can do real things. Every action one can take sits in one of three tiers.</p>
+  <p>Tier one, it just does. Drafting a message, sending an alert, spinning up a sub-task. Low stakes, easily undone.</p>
+  <p>Tier two, it has to ask. Pushing code, changing my calendar, anything reaching the outside world. It prepares the action and waits for my yes.</p>
+  <p>Tier three, it cannot do. Not "asks nicely first." There is no button, no code path. I didn't restrain it with an instruction. I built it so the capability doesn't exist.</p>
+  <p>That third tier is what those incidents are about.</p>
+  <p>And autonomy isn't granted, it's earned. Each capability is scored on how its past decisions played out, and gains independence only after a track record and my sign-off. It loses that trust automatically if it gets things wrong. Up slowly by permission, down fast by default.</p>
+  <p>None of this is exotic engineering. It's the oldest idea in management: delegate by track record, keep irreversible decisions close, make the safe path the default.</p>
+  <p>The frontier labs are learning it in public, with real companies on the other end. The rest of us get to read the reports first.</p>
+  <p>Next: where AI helps design better services, and where the human still wins.</p>
+  <div class="note">Originally posted on LinkedIn, September 2026 · <a href="https://www.linkedin.com/in/ibenwandu/recent-activity/all/">view the original thread</a><br><br>Ibe Nwandu builds AI systems and small products in Toronto. <a href="/">Index of work</a> · <a href="/writing/">All writing</a> · <a href="/feed.xml">RSS</a></div>
+</div></body></html>

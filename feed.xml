@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0"><channel>
-<title>Ibe Nwandu — writing</title>
-<link>https://ibenwandu.com/writing/</link>
-<description>Notes from building and shipping small AI products.</description>
-<item><title>Why I built a distribution scorecard</title><link>https://ibenwandu.com/writing/why-i-built-shipready.html</link><guid>https://ibenwandu.com/writing/why-i-built-shipready.html</guid><pubDate>Mon, 10 Nov 2026 12:00:00 -0500</pubDate></item>
-<item><title>Thirty developer products scored 44/100</title><link>https://ibenwandu.com/writing/thirty-products-scored.html</link><guid>https://ibenwandu.com/writing/thirty-products-scored.html</guid><pubDate>Tue, 11 Nov 2026 08:00:00 -0500</pubDate></item>
-<item><title>The Merchant Center trap: eleven products, zero barcodes</title><link>https://ibenwandu.com/writing/the-merchant-center-trap.html</link><guid>https://ibenwandu.com/writing/the-merchant-center-trap.html</guid><pubDate>Tue, 11 Nov 2026 08:00:00 -0500</pubDate></item>
+<rss version="2.0"><channel><title>Ibe Nwandu — writing</title><link>https://ibenwandu.com/writing/</link><description>Essays and posts on AI systems, distribution and small products.</description>
+<item><title>The gate said yes</title><link>https://ibenwandu.com/writing/linkedin-the-gate-said-yes.html</link><guid>https://ibenwandu.com/writing/linkedin-the-gate-said-yes.html</guid><pubDate>Thu, 20 Aug 2026 12:00:00 GMT</pubDate></item>
+<item><title>Uber blew its 2026 AI budget by April. I hit the same wall.</title><link>https://ibenwandu.com/writing/linkedin-uber-ai-budget-same-wall.html</link><guid>https://ibenwandu.com/writing/linkedin-uber-ai-budget-same-wall.html</guid><pubDate>Wed, 05 Aug 2026 12:00:00 GMT</pubDate></item>
+<item><title>The day I found out what my own tool was leaving out</title><link>https://ibenwandu.com/writing/linkedin-what-the-corpus-left-out.html</link><guid>https://ibenwandu.com/writing/linkedin-what-the-corpus-left-out.html</guid><pubDate>Wed, 26 Aug 2026 12:00:00 GMT</pubDate></item>
+<item><title>The AI that isn't allowed to act alone</title><link>https://ibenwandu.com/writing/linkedin-ai-not-allowed-to-act-alone.html</link><guid>https://ibenwandu.com/writing/linkedin-ai-not-allowed-to-act-alone.html</guid><pubDate>Tue, 15 Sep 2026 12:00:00 GMT</pubDate></item>
+<item><title>Why I built a distribution scorecard</title><link>https://ibenwandu.com/writing/why-i-built-shipready.html</link><guid>https://ibenwandu.com/writing/why-i-built-shipready.html</guid><pubDate>Tue, 10 Nov 2026 12:00:00 GMT</pubDate></item>
+<item><title>Thirty developer products scored 44/100</title><link>https://ibenwandu.com/writing/thirty-products-scored.html</link><guid>https://ibenwandu.com/writing/thirty-products-scored.html</guid><pubDate>Wed, 11 Nov 2026 12:00:00 GMT</pubDate></item>
+<item><title>The Merchant Center trap: eleven products, zero barcodes</title><link>https://ibenwandu.com/writing/the-merchant-center-trap.html</link><guid>https://ibenwandu.com/writing/the-merchant-center-trap.html</guid><pubDate>Wed, 11 Nov 2026 12:00:00 GMT</pubDate></item>
 </channel></rss>

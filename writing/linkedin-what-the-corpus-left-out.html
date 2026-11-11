@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The day I found out what my own tool was leaving out — Ibe Nwandu</title><link rel="icon" href="data:,">
+<meta name="description" content="I said I'd tell you about the tool I built for newcomers to Canada. Better story: the day I found out what it was leaving out.
+
+I arrived here as a ne">
+<link rel="alternate" type="application/rss+xml" title="Ibe Nwandu — writing" href="/feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root { --paper:#F6F4EF; --ink:#15171B; --ink-body:#2B2F36; --ink-muted:#4A4F57; --rule:#D5D1C7; --accent:#1B3A8C; }
+  body { margin:0; background:var(--paper); color:var(--ink-body); font:18px/1.65 'IBM Plex Sans', system-ui, sans-serif; }
+  .wrap { max-width:720px; margin:0 auto; padding:40px 24px 96px; }
+  .mast { display:flex; justify-content:space-between; align-items:baseline; border-bottom:1px solid var(--rule); padding-bottom:14px; margin-bottom:48px; }
+  .mast a { color:var(--ink); text-decoration:none; font:600 13px/1 'IBM Plex Mono', monospace; letter-spacing:.14em; text-transform:uppercase; }
+  .mast span { color:var(--ink-muted); font:12px/1 'IBM Plex Mono', monospace; letter-spacing:.08em; }
+  h1 { font:800 clamp(34px,5vw,48px)/1.05 'Bricolage Grotesque', sans-serif; color:var(--ink); margin:0 0 12px; letter-spacing:-.02em; }
+  .meta { font:12px/1.4 'IBM Plex Mono', monospace; color:var(--ink-muted); letter-spacing:.06em; text-transform:uppercase; margin-bottom:36px; }
+  p { margin:0 0 20px; } a { color:var(--accent); }
+  .note { border-top:1px solid var(--rule); margin-top:48px; padding-top:18px; font:14px/1.6 'IBM Plex Sans', sans-serif; color:var(--ink-muted); }
+</style></head><body><div class="wrap">
+  <div class="mast"><a href="/">Ibe Nwandu</a><span>Writing</span></div>
+  <h1>The day I found out what my own tool was leaving out</h1>
+  <div class="meta">August 2026 · LinkedIn</div>
+  <p>I said I'd tell you about the tool I built for newcomers to Canada. Better story: the day I found out what it was leaving out.</p>
+  <p>I arrived here as a newcomer, and the help isn't hidden so much as scattered. So I built my family a knowledge base of Canadian programs, credits and accounts: structured files with typed eligibility rules, every figure stamped with its source and date. No language model writes any of the output. You describe a household, it returns the entries that apply, and why.</p>
+  <p>It rests on the idea the industry has settled on for trustworthy AI: don't let the model generate the answer, make it retrieve one from something you control.</p>
+  <p>I still believe it. But it has a failure mode nobody talks about, and I walked into it.</p>
+  <p>I was reading my own output one evening and noticed a form missing. T1213. The one that reduces the tax taken off your pay during the year instead of waiting a year for the refund. Not obscure. Directly relevant. Absent.</p>
+  <p>So I audited it, expecting a handful of oversights. I found about two dozen missing levers, and worse, that they weren't oversights at all. They clustered. Three reasons, and only one was about content.</p>
+  <p>The first was the category list. Seven values, all of them describing how much tax you pay. T1213 changes when you pay it. There was no category it could go in, so it was never something I'd forgotten to add. It was something my own structure had no name for, which makes it invisible to every search I will ever run.</p>
+  <p>The other two were the same mistake, twice. A line in my own spec, written months earlier, scoped the research to "a working-age accumulating household." I meant it as a starting point; what it did was quietly decide who the tool was for. Everything attached to caring for an ageing parent, to studying, to a disability, to retirement: thin or missing. The system could model those households fine. One sentence in a document had ruled them out, and nobody read it again.</p>
+  <p>The corpus went from 54 entries to 94.</p>
+  <p>Here's the part worth sitting with. Every test passed the whole time. They always had. Tests prove your structure is sound; they can't tell you what isn't in it. A knowledge base doesn't fail loudly. A model that's wrong argues with you. An incomplete one just returns a shorter list, confidently, and you can't tell that apart from the truth.</p>
+  <p>Same shape as your policy library, your intent list, your CRM.</p>
+  <p>Grounding AI in your own content doesn't remove the risk of a wrong answer. It moves it into your content, where nobody is looking.</p>
+  <p>And finding it isn't technical work. It's asking who we decided this was for, and who that quietly excluded. Which is what business analysts and service designers have always done. That's the scarce skill. Not the code.</p>
+  <p>I only caught mine because I went looking for one specific form. I still don't know what I haven't noticed.</p>
+  <p>Next: everyone's buying AI tools, and almost nobody's driving the adoption.</p>
+  <div class="note">Originally posted on LinkedIn, August 2026 · <a href="https://www.linkedin.com/in/ibenwandu/recent-activity/all/">view the original thread</a><br><br>Ibe Nwandu builds AI systems and small products in Toronto. <a href="/">Index of work</a> · <a href="/writing/">All writing</a> · <a href="/feed.xml">RSS</a></div>
+</div></body></html>

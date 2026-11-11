@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Uber blew its 2026 AI budget by April. I hit the same wall. — Ibe Nwandu</title><link rel="icon" href="data:,">
+<meta name="description" content="Uber blew its entire 2026 AI budget by April. I hit the same wall on a much smaller one.
+
+Some of the biggest companies in the world ran into the same">
+<link rel="alternate" type="application/rss+xml" title="Ibe Nwandu — writing" href="/feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root { --paper:#F6F4EF; --ink:#15171B; --ink-body:#2B2F36; --ink-muted:#4A4F57; --rule:#D5D1C7; --accent:#1B3A8C; }
+  body { margin:0; background:var(--paper); color:var(--ink-body); font:18px/1.65 'IBM Plex Sans', system-ui, sans-serif; }
+  .wrap { max-width:720px; margin:0 auto; padding:40px 24px 96px; }
+  .mast { display:flex; justify-content:space-between; align-items:baseline; border-bottom:1px solid var(--rule); padding-bottom:14px; margin-bottom:48px; }
+  .mast a { color:var(--ink); text-decoration:none; font:600 13px/1 'IBM Plex Mono', monospace; letter-spacing:.14em; text-transform:uppercase; }
+  .mast span { color:var(--ink-muted); font:12px/1 'IBM Plex Mono', monospace; letter-spacing:.08em; }
+  h1 { font:800 clamp(34px,5vw,48px)/1.05 'Bricolage Grotesque', sans-serif; color:var(--ink); margin:0 0 12px; letter-spacing:-.02em; }
+  .meta { font:12px/1.4 'IBM Plex Mono', monospace; color:var(--ink-muted); letter-spacing:.06em; text-transform:uppercase; margin-bottom:36px; }
+  p { margin:0 0 20px; } a { color:var(--accent); }
+  .note { border-top:1px solid var(--rule); margin-top:48px; padding-top:18px; font:14px/1.6 'IBM Plex Sans', sans-serif; color:var(--ink-muted); }
+</style></head><body><div class="wrap">
+  <div class="mast"><a href="/">Ibe Nwandu</a><span>Writing</span></div>
+  <h1>Uber blew its 2026 AI budget by April. I hit the same wall.</h1>
+  <div class="meta">August 2026 · LinkedIn</div>
+  <p>Uber blew its entire 2026 AI budget by April. I hit the same wall on a much smaller one.</p>
+  <p>Some of the biggest companies in the world ran into the same wall I did with AI costs this year. They just had more zeros on the bill.</p>
+  <p>Uber reportedly burned through its entire 2026 AI budget in four months and capped employees at $1,500 a month per tool. Amazon, Walmart, Cisco and Meta have all pulled similar levers, capping tokens or pushing staff toward cheaper models. Uber's own COO admitted it's become "very hard to draw a line" between the rising spend and better products for customers.</p>
+  <p>I hit the same wall, on a personal budget. It arrived as an email on a Friday afternoon: my API access was off, my organisation out of usage credits. Everything I'd built stopped answering at once. I topped it up. Five days later it happened again at midnight, and my systems sat dark for hours before I paid again.</p>
+  <p>That second time, I stopped and read where the money had gone. One single day, weeks earlier, had burned roughly seven million tokens, about 90% of that month's usage. In one day.</p>
+  <p>Here's what I'd done wrong, and what those companies did too: I was paying frontier prices for work that wasn't frontier-grade. But not because I'd chosen to. A background worker of mine called the AI through a command-line tool, and I'd never told it which model to use. So it quietly used that tool's default, the most expensive model available. Nobody decided that. It was a blank I left empty, and the default filled it in.</p>
+  <p>And here's the part I'll admit feels a little vindicating. While the biggest companies scramble to add cost governance after the fact, most of what they're reaching for is caps: a ceiling on how much each person can burn. A cap is a smoke alarm. It tells you something is wrong once the money is already gone.</p>
+  <p>What actually fixed mine went further. I revoked the worker's key to the expensive account entirely. It can't overspend now, because it physically cannot reach the thing it was overspending on. Don't discourage the costly path. Make it unreachable.</p>
+  <p>That's the real lesson under the bill. This isn't a technical optimization, it's a procurement discipline. You wouldn't fly every employee business class for every errand. The frontier model is business class: worth it for the flights that matter, wasteful for the daily commute. The skill isn't picking the "best" model. It's knowing which tier each job deserves, and noticing when nobody has decided at all.</p>
+  <p>Next: how I actually route the work, and one model that got cheaper and better at the same time.</p>
+  <div class="note">Originally posted on LinkedIn, August 2026 · <a href="https://www.linkedin.com/in/ibenwandu/recent-activity/all/">view the original thread</a><br><br>Ibe Nwandu builds AI systems and small products in Toronto. <a href="/">Index of work</a> · <a href="/writing/">All writing</a> · <a href="/feed.xml">RSS</a></div>
+</div></body></html>
